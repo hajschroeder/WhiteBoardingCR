@@ -1,0 +1,40 @@
+//Create an algorithm to remove duplicates from an array
+//do not use the filter method, until solved
+//try recursive 
+ 
+example input = [1,2,3,3,3, "hello", "hi", "hi", "the balrog"]
+example output = [1, 2, 3, "hello", "hi", "the balrog"]
+
+//pseudocode think-through 
+
+function removeDuplicates(array) {
+  //output
+  //loop through the parameter
+    //check for duplicates
+    //push non duplicated elements into the output...indexOf
+  //return the output
+}
+
+//functional attempt
+
+function removeDuplicates(array) {
+  let outputArray = []
+  for (let i =0; i < array.length; i++) {
+    if (outputArray.indexOf(array[i] === 1)) {
+      outputArray.push(array[i])
+    }
+  }
+}
+
+
+console.log(removeDuplicates([1,2,3,3,3,"hello", "hi", "hi", "the balrog"]))
+
+
+//Attempted using filter
+
+//exampleInput = [1,2,3,3,3,"hello", "hi", "hi", "the balrog"]
+//exampleOutput = [1, 2, 3, "hello", "hi", "the balrog"]
+const unfilteredArray = [input]
+const filteredArray = unfilteredArray.filter((e, i) => unfilteredArray.indexOf(e) === 1)
+ 
+console.log(filteredArray)
